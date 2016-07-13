@@ -34,13 +34,3 @@ while b != 5:
 	else:
 		posicion_tomada.append(tiro_valor)
 		lista[tiro_columna][tiro_fila] = chr(79)
-
-
-
-
-
-
-
-
-	
-
