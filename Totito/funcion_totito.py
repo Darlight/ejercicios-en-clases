@@ -1,0 +1,3 @@
+def ganador(turnos):
+	suma = []
+	
