@@ -1,6 +1,5 @@
 from random import random
 lista = [[ "A", "B", "C"], ["D", "E", "F"], ["G", "H", "I"] ]
-turnos = [[0,0,0],[0,0,0],[0,0,0]]
 posicion_tomada = []
 
 print ("Bienvenidos a Totito")
@@ -16,7 +15,7 @@ while b != 5:
 	tiro_columna = tiro_valor //3
 
 	if tiro_valor in posicion_tomada:
-			print("Use otra posicion")
+			print("Use otra posicion perdio el turno \n")
 	else:
 		posicion_tomada.append(tiro_valor)
 		lista[tiro_columna][tiro_fila] = chr(88)
@@ -31,7 +30,7 @@ while b != 5:
 	tiro_columna = tiro_valor //3
 
 	if tiro_valor in posicion_tomada:
-			print("Use otra posicion")
+			print("Use otra posicion perdio el turno \n")
 	else:
 		posicion_tomada.append(tiro_valor)
 		lista[tiro_columna][tiro_fila] = chr(79)
