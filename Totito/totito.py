@@ -1,10 +1,9 @@
-from random import random
-lista = [[ "A", "B", "C"], ["D", "E", "F"], ["G", "H", "I"] ]
-posicion_tomada = []
+from funcion_totito import ganador, print_totito
+lista = [[ ord("A"), ord("B"), ord("C")], [ord("D"), ord("E"), ord("F")], [ord("G"), ord("H"), ord("I")] ]
 
-print ("Bienvenidos a Totito")
-b = 4
-while b != 5:
+print ("Bienvenidos a Totito\n")
+while ganador(lista):
+
 	print(lista[0])
 	print(lista[1])
 	print(lista[2])
@@ -14,11 +13,7 @@ while b != 5:
 	tiro_fila = tiro_valor % 3
 	tiro_columna = tiro_valor //3
 
-	if tiro_valor in posicion_tomada:
-			print("Use otra posicion perdio el turno \n")
-	else:
-		posicion_tomada.append(tiro_valor)
-		lista[tiro_columna][tiro_fila] = chr(88)
+	print(print_totito(lista))
 
 	print(lista[0])
 	print(lista[1])
@@ -28,9 +23,3 @@ while b != 5:
 	tiro_valor = ord(tiro)-65
 	tiro_fila = tiro_valor % 3
 	tiro_columna = tiro_valor //3
-
-	if tiro_valor in posicion_tomada:
-			print("Use otra posicion perdio el turno \n")
-	else:
-		posicion_tomada.append(tiro_valor)
-		lista[tiro_columna][tiro_fila] = chr(79)
