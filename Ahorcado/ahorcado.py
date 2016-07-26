@@ -1,6 +1,6 @@
 import random
 from palabras import lista_de_palabras
-from funciones import letra_en_palabra
+from funciones import dibujo
 print ("Bienvenido al Ahorcado \n")
 
 palabra_elegida = random.choice(lista_de_palabras)
