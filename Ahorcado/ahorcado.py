@@ -6,21 +6,26 @@ print ("Bienvenido al Ahorcado \n")
 palabra_elegida = random.choice(lista_de_palabras)
 oportunidades = 0
 ganador = False
-guiones = ("_ "*int(len(palabra_elegida)))
 letras_separadas = list(palabra_elegida)
+error = False
 # usar "letra" in "palabra" para que el juego funcione.
 # crear el stickman con: "O", "I", "/", "\" y el palo.
-while oportunidades != 7:
-	for guion in range(len(letras_separadas)):
-		letras_separadas[guion] = "_ "
-
+for guion in range(len(letras_separadas)):
+	letras_separadas[guion] = "_"
+while oportunidades != 7 or ganador == True:
+	estado = False
 	print(letras_separadas)
-	letra_ingresada = input("Ingrese la letra deseada: ")
-	if letra_ingresada in letras_separadas:
-		print("prueba")
-		
 
-	oportunidades = oportunidades + 1
+	letra_ingresada = input("Ingrese la letra deseada: ")
+	if letra_ingresada in palabra_elegida:
+		for i in range(len(palabra_elegida)):
+			if palabra_elegida[i] == letra_ingresada:
+				letras_separadas[i] = letra_ingresada
+	else:
+		oportunidades = oportunidades + 1
+		error = True
+		dibujo(error)
+
 
 
 
