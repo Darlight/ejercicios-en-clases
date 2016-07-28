@@ -48,8 +48,8 @@ def dibujo(condicion,turnos):
      /|\  |
      / \  |
           |
-    =========''']
+    ========= Se murio...''']
 	if condicion == True:
-		return muneco[turnos]
+		return muneco[turnos-1]
 
 
