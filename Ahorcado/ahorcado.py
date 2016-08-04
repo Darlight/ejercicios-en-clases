@@ -33,6 +33,8 @@ while desea_jugar == True:
 		if ganador == len(palabra_elegida):
 			oportunidades = 7
 			print("Gano! la palabra correcta es: " + palabra_elegida)
+		elif oportunidades == 7 and ganador!= len(palabra_elegida):
+			print ("usted ha perdido, la palabra correcta era: ", palabra_elegida)
 	respuesta = input("Desea jugar de nuevo? : si o no ")
 	if respuesta == "si":
 		desea_jugar = True
