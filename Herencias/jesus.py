@@ -1,4 +1,4 @@
-class FiguraGeometrica():
+class FiguraGeometrica(object):
 
 	def __init__ (self,base,altura):
 		self.base = base
