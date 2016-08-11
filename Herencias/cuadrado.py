@@ -6,8 +6,8 @@ class Cuadrado(FiguraGeometrica):
 		super().__init__(lado,lado)
 
 	def imprimir(self):
-		resultado = " "
+		resultado = ""
 
 		for i in range(self.altura):
-			resultado += ("* " * self.base) + "\n"
-			return resultado
+			resultado += "* " * self.base + " \n"
+		return resultado

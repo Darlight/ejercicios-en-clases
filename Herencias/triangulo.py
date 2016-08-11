@@ -6,11 +6,11 @@ class Triangulo(FiguraGeometrica):
 		super().__init__(base,altura)
 
 	def imprimir(self):
-		resultado = " "
+		resultado = ""
 
 		for i in range(self.altura):
-			resultado += "*" + (i + 1) * "\n"
-			return resultado
+			resultado += " " * (self.altura - i) + " *" * (i + 1) + "\n"
+		return resultado
 
 	def calcular_area(self):
-		return super().calcular.area()/ 2.0
+		return (super().calcular_area()/ 2.0)
